@@ -10,14 +10,24 @@ const R = require('ramda');
 // console.log(x)
 
 
-const products = [
-    { name: 'Jeans', price: 80, category: 'clothes', stock: 100 },
-    { name: 'Andrey', price: 50, category: 'car', stock: 22 },
-    { name: 'Dima', price: 100, category: 'bom-bom', stock: 33 }
-]
+// const products = [
+//     { name: 'Jeans', price: 80, category: 'clothes', stock: 100 },
+//     { name: 'Andrey', price: 50, category: 'car', stock: 22 },
+//     { name: 'Dima', price: 100, category: 'bom-bom', stock: 33 }
+// ]
 
-const predicate = R.T
+// const predicate = R.T
 
-const getResults = R.pipe(R.filter(predicate), R.pluck('name'))
-const result = getResults(products)
-console.log(result)
+// const getResults = R.pipe(R.filter(predicate), R.pluck('name'))
+// const result = getResults(products)
+// console.log(result)
+
+
+const arr = [10, 20, 30]
+const f = x => x >= 10
+
+const g = (h) => {
+    return h >= 10
+}
+
+console.log(R.all(g, arr))
